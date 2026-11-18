@@ -1,0 +1,20 @@
+# env
+.env
+*.env.local
+backend/.env
+# python
+__pycache__/
+*.pyc
+.venv/
+backend/.venv/
+# models & data
+backend/ml_models/
+ml_training/data/*
+!ml_training/data/.gitkeep
+# storage
+uploads/
+# node
+node_modules/
+frontend/dist/
+# OS
+.DS_Store

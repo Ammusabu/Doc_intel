@@ -4,6 +4,7 @@ import Layout from "./components/Layout"
 import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
 import Documents from "./pages/Documents"
+import DocumentDetail from "./pages/DocumentDetail"
 import Search from "./pages/Search"
 import Chat from "./pages/Chat"
 import Analytics from "./pages/Analytics"
@@ -36,6 +37,7 @@ export default function App() {
           >
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/documents" element={<Documents />} />
+            <Route path="/documents/:id" element={<DocumentDetail />} />
             <Route path="/search" element={<Search />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/analytics" element={<Analytics />} />

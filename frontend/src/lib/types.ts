@@ -56,3 +56,31 @@ export interface ChatResponse {
   citations: Citation[]
   no_relevant_docs: boolean
 }
+
+export interface Chunk {
+  id: string
+  chunk_index: number
+  page_number: number
+  token_count: number
+  content: string
+  embedding_model: string
+  embedding_version: string
+  has_embedding: boolean
+}
+
+export interface ChunksResponse {
+  document_id: string
+  total: number
+  embedding_model: string | null
+  embedding_version: string | null
+  chunks: Chunk[]
+}
+
+export interface TextResponse {
+  document_id: string
+  page_count: number
+  text_by_page: { page_number: number; text: string }[]
+}
+
+export type SortKey = "created_at" | "file_size_bytes" | "classification_confidence"
+export type SortDir = "asc" | "desc"

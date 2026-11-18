@@ -1,6 +1,10 @@
 """Centralised settings loaded from .env via pydantic-settings."""
 from functools import lru_cache
+from pathlib import Path
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+_ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
 
 
 class Settings(BaseSettings):
@@ -29,7 +33,7 @@ class Settings(BaseSettings):
     MODEL_DIR: str = "./backend/ml_models"
 
     model_config = SettingsConfigDict(
-        env_file="backend/.env",
+        env_file=str(_ENV_FILE),
         env_file_encoding="utf-8",
         extra="ignore",
     )

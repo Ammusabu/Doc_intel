@@ -84,3 +84,9 @@ export interface TextResponse {
 
 export type SortKey = "created_at" | "file_size_bytes" | "classification_confidence"
 export type SortDir = "asc" | "desc"
+
+export interface StreamMeta {
+  conversation_id: string
+  citations: Citation[]
+  no_relevant_docs: boolean
+}

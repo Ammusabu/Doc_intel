@@ -127,3 +127,42 @@ async def answer_question(
     ))
     await db.commit()
     return conv.id, answer, citations, no_docs
+
+
+def stream_groq(prompt: str, model: str = "openai/gpt-oss-20b"):
+    """Yield text tokens from Groq's streaming API. Raises RAGError on HTTP failure."""
+    import json
+    with httpx.stream(
+        "POST",
+        "https://api.groq.com/openai/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {settings.GROQ_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 800,
+            "temperature": 0.1,
+            "stream": True,
+        },
+        timeout=120,
+    ) as resp:
+        if resp.status_code != 200:
+            body = b""
+            for chunk in resp.iter_bytes():
+                body += chunk
+                if len(body) > 400: break
+            raise RAGError(f"Groq {resp.status_code}: {body.decode(errors='replace')[:300]}")
+        for line in resp.iter_lines():
+            if not line: continue
+            if line.startswith("data: "):
+                data = line[6:].strip()
+                if data == "[DONE]": return
+                try:
+                    obj = json.loads(data)
+                    delta = obj.get("choices", [{}])[0].get("delta", {})
+                    if "content" in delta and delta["content"]:
+                        yield delta["content"]
+                except json.JSONDecodeError:
+                    continue

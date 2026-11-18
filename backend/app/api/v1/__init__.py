@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 
+import app.api.v1.analytics as _analytics
 import app.api.v1.auth as _auth
 import app.api.v1.chat as _chat
 import app.api.v1.documents as _documents
@@ -9,6 +10,7 @@ import app.api.v1.search as _search
 
 api_router = APIRouter()
 api_router.include_router(_health.router)
+api_router.include_router(_analytics.router)
 api_router.include_router(_auth.router)
 api_router.include_router(_documents.router)
 api_router.include_router(_search.router)

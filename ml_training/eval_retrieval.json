@@ -1,0 +1,94 @@
+{
+  "n_queries": 10,
+  "metrics": {
+    "Recall@1": 1.0,
+    "Recall@3": 1.0,
+    "Recall@5": 1.0,
+    "Recall@10": 1.0,
+    "MRR": 1.0,
+    "nDCG@5": 1.0,
+    "nDCG@10": 1.0
+  },
+  "per_query": [
+    {
+      "query": "graphics driver boot failure",
+      "expected": "tech_graphics.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "tech_graphics.txt"
+    },
+    {
+      "query": "kernel module hardware revision",
+      "expected": "tech_graphics.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "tech_graphics.txt"
+    },
+    {
+      "query": "quarterly revenue growth",
+      "expected": "finance_q3.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "finance_q3.txt"
+    },
+    {
+      "query": "paid time off policy",
+      "expected": "hr_policy.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "hr_policy.txt"
+    },
+    {
+      "query": "parental leave duration",
+      "expected": "hr_policy.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "hr_policy.txt"
+    },
+    {
+      "query": "binding arbitration clause",
+      "expected": "legal_contract.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "legal_contract.txt"
+    },
+    {
+      "query": "Delaware governing law",
+      "expected": "legal_contract.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "legal_contract.txt"
+    },
+    {
+      "query": "DistilBERT accuracy inference cost",
+      "expected": "research_ml.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "research_ml.txt"
+    },
+    {
+      "query": "cross-encoder reranking precision",
+      "expected": "research_ml.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "research_ml.txt"
+    },
+    {
+      "query": "remote work manager approval",
+      "expected": "hr_policy.txt",
+      "relevant_ranks": [
+        1
+      ],
+      "top_1_title": "hr_policy.txt"
+    }
+  ]
+}

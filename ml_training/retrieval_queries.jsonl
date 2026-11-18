@@ -1,0 +1,10 @@
+{"query": "graphics driver boot failure", "expected_document_title": "tech_graphics.txt", "expected_chunk_fingerprint": "the graphics card supports 1024x768 reso"}
+{"query": "kernel module hardware revision", "expected_document_title": "tech_graphics.txt", "expected_chunk_fingerprint": "the graphics card supports 1024x768 reso"}
+{"query": "quarterly revenue growth", "expected_document_title": "finance_q3.txt", "expected_chunk_fingerprint": "quarterly revenue increased 12 % year ov"}
+{"query": "paid time off policy", "expected_document_title": "hr_policy.txt", "expected_chunk_fingerprint": "all full - time employees receive 20 day"}
+{"query": "parental leave duration", "expected_document_title": "hr_policy.txt", "expected_chunk_fingerprint": "all full - time employees receive 20 day"}
+{"query": "binding arbitration clause", "expected_document_title": "legal_contract.txt", "expected_chunk_fingerprint": "the agreement shall be governed by the l"}
+{"query": "Delaware governing law", "expected_document_title": "legal_contract.txt", "expected_chunk_fingerprint": "the agreement shall be governed by the l"}
+{"query": "DistilBERT accuracy inference cost", "expected_document_title": "research_ml.txt", "expected_chunk_fingerprint": "we evaluate transformer models on docume"}
+{"query": "cross-encoder reranking precision", "expected_document_title": "research_ml.txt", "expected_chunk_fingerprint": "we evaluate transformer models on docume"}
+{"query": "remote work manager approval", "expected_document_title": "hr_policy.txt", "expected_chunk_fingerprint": "all full - time employees receive 20 day"}

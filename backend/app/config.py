@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
 
     # Object storage
-    STORAGE_ENDPOINT_URL: str = "http://localhost:9000"
+    STORAGE_ENDPOINT_URL: str = ""
     STORAGE_ACCESS_KEY: str = "minioadmin"
     STORAGE_SECRET_KEY: str = "minioadmin"
     STORAGE_BUCKET_NAME: str = "docintel"

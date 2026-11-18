@@ -1,0 +1,3 @@
+The graphics card supports 1024x768 resolution and 256 colors. The driver initialization for the X window system failed during boot. We need to recompile the kernel module for the new hardware revision to enable proper display output. The system administrator noted that the firmware version must match the hardware revision exactly or the OS will hang during initialization. This document summarizes the technical troubleshooting steps taken.
+
+Additional notes: The motherboard revision is 3.1, and the BIOS version must be updated to v2.4 before installing the new kernel module. The graphics driver package is available in the vendor repository. Follow the standard procedure: boot into single-user mode, load the module, test with X server, then reboot into normal mode.
